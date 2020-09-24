@@ -2,6 +2,7 @@ import React from 'react';
 import { Clock } from "./clock/clock";
 import { Greeting } from './greeting/Greeting';
 import { NumberList } from './list/numbers';
+import { Blog } from './blog/blog';
 
 export class App extends React.Component {
 
@@ -20,12 +21,18 @@ export class App extends React.Component {
  
 
   render() {
-    const numbers = [1, 2, 3, 4, 5]
+    const numbers = [1, 2, 3, 4, 5];
+    const posts = [
+      {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+      {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+    ];
     return <div>
         <button  className="btn btn-primary" onClick={() => this.toggleIsLogin()}>按钮</button>
         <Greeting isLoggedIn={this.state.isToggleOn} />,
 
         <NumberList numbers={numbers}></NumberList>
+
+        <Blog posts={posts}></Blog>
 
         <Clock></Clock>
         <Clock></Clock>
