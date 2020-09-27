@@ -4,6 +4,7 @@ import { Greeting } from './greeting/Greeting';
 import { NumberList } from './list/numbers';
 import { Blog } from './blog/blog';
 import { NameForm } from './forms/NameForm';
+import { EssayForm } from './forms/EssayForm';
 
 export class App extends React.Component {
 
@@ -32,10 +33,10 @@ export class App extends React.Component {
         <Greeting isLoggedIn={this.state.isToggleOn} />,
 
         <NumberList numbers={numbers}></NumberList>
+        <Blog posts={posts}></Blog>
         
         <NameForm />
-
-        <Blog posts={posts}></Blog>
+        <EssayForm />
 
         <Clock></Clock>
         <Clock></Clock>
