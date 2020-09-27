@@ -6,6 +6,7 @@ import { Blog } from './blog/blog';
 import { NameForm } from './forms/NameForm';
 import { EssayForm } from './forms/EssayForm';
 import { FlavorForm } from './forms/FlavorForm';
+import { Reservation } from './forms/Reservation';
 
 export class App extends React.Component {
 
@@ -39,6 +40,7 @@ export class App extends React.Component {
         <NameForm />
         <EssayForm />
         <FlavorForm />
+        <Reservation />
 
         <Clock></Clock>
         <Clock></Clock>
