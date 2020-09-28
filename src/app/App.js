@@ -7,6 +7,7 @@ import { NameForm } from './forms/NameForm';
 import { EssayForm } from './forms/EssayForm';
 import { FlavorForm } from './forms/FlavorForm';
 import { Reservation } from './forms/Reservation';
+import { Calculator } from './lifting-state-up/Calculator';
 
 export class App extends React.Component {
 
@@ -31,6 +32,7 @@ export class App extends React.Component {
       {id: 2, title: 'Installation', content: 'You can install React from npm.'}
     ];
     return <div>
+        <Calculator />
         <button  className="btn btn-primary" onClick={() => this.toggleIsLogin()}>按钮</button>
         <Greeting isLoggedIn={this.state.isToggleOn} />,
 
