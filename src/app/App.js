@@ -1,6 +1,7 @@
 import React from 'react';
 import { Clock } from "./clock/clock";
 import { Greeting } from './greeting/Greeting';
+import { Calculator } from './lifting-state-up/calculator';
 import { NumberList } from './list/numbers';
 import { Blog } from './blog/blog';
 import { NameForm } from './forms/NameForm';
@@ -49,6 +50,8 @@ export class App extends React.Component {
         <Clock></Clock>
         <Clock></Clock>
         <Clock></Clock>
+
+        <Calculator/>
     </div>
   }
 }
