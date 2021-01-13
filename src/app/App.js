@@ -1,14 +1,13 @@
 import React from 'react';
 import { Clock } from "./clock/clock";
 import { Greeting } from './greeting/Greeting';
-import { Calculator } from './lifting-state-up/calculator';
+import { Calculator } from './lifting-state-up/Calculator';
 import { NumberList } from './list/numbers';
 import { Blog } from './blog/blog';
 import { NameForm } from './forms/NameForm';
 import { EssayForm } from './forms/EssayForm';
 import { FlavorForm } from './forms/FlavorForm';
 import { Reservation } from './forms/Reservation';
-import { Calculator } from './lifting-state-up/Calculator';
 import { ProductTable } from './search/ProductTable';
 
 export class App extends React.Component {
