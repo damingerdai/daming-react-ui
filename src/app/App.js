@@ -1,5 +1,6 @@
 import React from 'react';
-import { Clock } from "./clock/clock";
+import { Clock } from './clock/clock';
+import { WelcomeDialog } from './composition-vs-inheritance/welcome-dialog';
 import { Greeting } from './greeting/Greeting';
 import { Calculator } from './lifting-state-up/Calculator';
 import { NumberList } from './list/numbers';
@@ -51,6 +52,8 @@ export class App extends React.Component {
         <Clock></Clock>
 
         <Calculator/>
+
+        <WelcomeDialog/>
     </div>
   }
 }
