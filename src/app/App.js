@@ -34,6 +34,9 @@ export class App extends React.Component {
       {id: 2, title: 'Installation', content: 'You can install React from npm.'}
     ];
     return <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+          <p className="navbar-brand">Navbar</p>
+        </nav>
         <ProductTable/>
         <Calculator />
         <button  className="btn btn-primary" onClick={() => this.toggleIsLogin()}>按钮</button>
