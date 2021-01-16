@@ -7,7 +7,7 @@ export function HooksExample() {
         if (count > 0) {
             document.title = `You click ${count} times`;
         }
-    })
+    }, [count]);
 
     return (
         <div>
