@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function HooksExample() {
     const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        if (count > 0) {
+            document.title = `You click ${count} times`;
+        }
+    })
 
     return (
         <div>
