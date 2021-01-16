@@ -11,6 +11,12 @@ import { FlavorForm } from './forms/FlavorForm';
 import { Reservation } from './forms/Reservation';
 import { ProductTable } from './search/ProductTable';
 
+class Hello extends React.Component {
+  render() {
+    return React.createElement('div', null, `Hello ${this.props.name}`);
+  }
+}
+
 export class App extends React.Component {
 
 
@@ -39,6 +45,7 @@ export class App extends React.Component {
         </nav>
         <ProductTable/>
         <Calculator />
+        <Hello name="damingerdai"/>
         <button  className="btn btn-primary" onClick={() => this.toggleIsLogin()}>按钮</button>
         <Greeting isLoggedIn={this.state.isToggleOn} />,
 
