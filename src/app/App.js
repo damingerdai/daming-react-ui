@@ -2,6 +2,7 @@ import React from 'react';
 import { Clock } from './clock/clock';
 import { WelcomeDialog } from './composition-vs-inheritance/welcome-dialog';
 import { Greeting } from './greeting/Greeting';
+import { HooksExample } from './hooks';
 import { Calculator } from './lifting-state-up/Calculator';
 import { NumberList } from './list/numbers';
 import { Blog } from './blog/blog';
@@ -43,6 +44,7 @@ export class App extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-primary">
           <p className="navbar-brand">Navbar</p>
         </nav>
+        <HooksExample />
         <ProductTable/>
         <Calculator />
         <Hello name="damingerdai"/>
