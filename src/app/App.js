@@ -11,8 +11,11 @@ import { EssayForm } from "./forms/EssayForm";
 import { FlavorForm } from "./forms/FlavorForm";
 import { Reservation } from "./forms/Reservation";
 import { ProductTable } from "./search/ProductTable";
+import Counter from './redux';
 
 import './App.scss';
+
+export { store } from './redux';
 
 class Hello extends React.Component {
   render() {
@@ -48,6 +51,7 @@ export class App extends React.Component {
           <p className="navbar-brand">Navbar</p>
         </nav>
         <div className="content">
+          <Counter />
           <HooksExample />
           <ProductTable />
           <Calculator />
