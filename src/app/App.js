@@ -5,6 +5,9 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+
+import Login from "./components/login/login";
+
 import "./App.scss";
 
 export { store } from "./redux";
@@ -43,29 +46,23 @@ export const App = () => {
           <Typography variant="h6" className={classes.title}>
             大明
           </Typography>
-          <Button variant="outlined" color="primary" disableElevation>
-            <Link to="/">Home</Link>
-          </Button>
-
-          <Link to="/about">
+          <Link to="/">
             <Button variant="contained" color="primary" disableElevation>
-              About
+            Home
             </Button>
           </Link>
-          <Typography variant="h6">
-            <Link to="/users">Users</Link>
-          </Typography>
           <div className="flex-spacer"></div>
-          <Button color="inherit">Login</Button>
+          <Link to="/login">
+            <Button variant="contained" color="primary" disableElevation>
+              Login
+            </Button>
+          </Link>
         </Toolbar>
       </AppBar>
       <main className="content">
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/">
             <Home />
