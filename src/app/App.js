@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -10,30 +11,67 @@ export { store } from "./redux";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    display: "flex",
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1,
+    // flexGrow: 1,
   },
-}))
+}));
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
 
 export const App = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
+    <Router>
+      <AppBar position="fixed" className={classes.root}>
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             大明
           </Typography>
-          <div className="flex-space"></div>
+          <Button variant="outlined" color="primary" disableElevation>
+            <Link to="/">Home</Link>
+          </Button>
+
+          <Link to="/about">
+            <Button variant="contained" color="primary" disableElevation>
+              About
+            </Button>
+          </Link>
+          <Typography variant="h6">
+            <Link to="/users">Users</Link>
+          </Typography>
+          <div className="flex-spacer"></div>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </div>
+      <main className="content">
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </main>
+    </Router>
   );
 };
