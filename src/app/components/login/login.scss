@@ -1,0 +1,38 @@
+.box {
+  display: flex;
+  margin: 0 auto;
+  padding: {
+    top: 200px;
+  }
+  .content {
+    .card {
+      box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%),
+        0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      min-width: 450px;
+      padding: 16px;
+      .title {
+        text-align: center;
+      }
+
+      .form {
+          margin: {
+              bottom: 16px;
+          };
+      }
+
+      .divider {
+          margin: {
+              bottom: 8px;
+              top: 8px;
+          };
+      }
+
+      .action {
+        text-align: center;
+        & > * {
+            margin: 8px;
+        }
+      }
+    }
+  }
+}
